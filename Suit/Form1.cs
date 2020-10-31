@@ -1,5 +1,6 @@
 ﻿using iTextSharp.text.pdf;
 using Microsoft.Reporting.WinForms;
+using Syncfusion.Pdf.Parsing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -121,81 +122,132 @@ namespace Suit
         }
         public void ConcatenatePDF()
         {
-            List<string> FileName = new List<string>();
-            using (var db = new LegalCounselEntities())
+            try
             {
-                var ActiveIds = db.SimpleSuitDocumentationLists.Select(m => m.ActiveID).Distinct();
-                foreach (int ActiveId in ActiveIds)
+                List<string> FileName = new List<string>();
+                using (var db = new LegalCounselEntities())
                 {
-                    var FIleNames = from st in db.SimpleSuitDocumentationLists
-                                    where st.ActiveID == ActiveId
-                                    select st.FileName;
-
-                    foreach (var _FileName in FIleNames)
+                    var ActiveIds = db.SimpleSuitDocumentationLists.Select(m => m.ActiveID).Distinct();
+                    foreach (int ActiveId in ActiveIds)
                     {
-                        FileName.Add( _FileName);
+                        var FIleNames = from st in db.SimpleSuitDocumentationLists
+                                        where st.ActiveID == ActiveId
+                                        select st.FileName;
 
+                        foreach (var _FileName in FIleNames)
+                        {
+                            FileName.Add(_FileName);
+
+                        }
+                        MergePDF(FileName, ActiveId);
+                        FileName.Clear();
                     }
-                    MergePDF(FileName, ActiveId);
-                    FileName.Clear();
+
                 }
+            }
+            catch (Exception ex)
+            {
 
             }
         }
         private static void MergePDF(List<string> FileName, int ActiveId)
         {
-            //string[] fileArray = new string[2];
-            //fileArray[0] = File1;
-            //fileArray[1] = File2;
-
-            PdfReader reader = null;
-            iTextSharp.text.Document sourceDocument = null;
-            PdfCopy pdfCopyProvider = null;
-            PdfImportedPage importedPage;
-            string outputPdfPath = @"C:\Users\PAB\Desktop\shanava\result\" + ActiveId.ToString() + ".pdf";
-
-            sourceDocument = new iTextSharp.text.Document();
-            pdfCopyProvider = new PdfCopy(sourceDocument, new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));
-
-            //output file Open  
-            sourceDocument.Open();
-
-
-            //files list wise Loop  
-            for (int f = 0; f < FileName.Count; f++)
+            try
             {
-                int pages = TotalPageCount(FileName[f]);
+                //string[] fileArray = new string[2];
+                //fileArray[0] = File1;
+                //fileArray[1] = File2;
 
-                reader = new PdfReader(FileName[f]);
-                //Add pages in new file  
-                for (int i = 1; i <= pages; i++)
+                PdfReader reader = null;
+               // PdfReader.unethicalreading = true;
+                iTextSharp.text.Document sourceDocument = null;
+                PdfCopy pdfCopyProvider = null;
+                PdfImportedPage importedPage;
+                string outputPdfPath = @"C:\Users\PAB\Desktop\shanava\result\" + ActiveId.ToString() + ".pdf";
+
+                sourceDocument = new iTextSharp.text.Document();
+                pdfCopyProvider = new PdfCopy(sourceDocument, new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));
+
+                //output file Open  
+                sourceDocument.Open();
+
+
+                //files list wise Loop  
+                for (int f = 0; f < FileName.Count; f++)
                 {
-                    importedPage = pdfCopyProvider.GetImportedPage(reader, i);
-                    pdfCopyProvider.AddPage(importedPage);
-                }
+                    int pages = TotalPageCount(FileName[f]);
+                    if (pages > 0)
+                    {
+                        reader = new PdfReader(FileName[f]);
+                        if (pages < 2)
+                        {
+                            PdfReader.unethicalreading = true;
+                        }
+                        //Add pages in new file  
+                        for (int i = 1; i <= pages; i++)
+                        {
+                            importedPage = pdfCopyProvider.GetImportedPage(reader, i);
+                            pdfCopyProvider.AddPage(importedPage);
+                        }
 
-                reader.Close();
+                        reader.Close();
+                    }
+                }
+                //save the output file  
+                sourceDocument.Close();
             }
-            //save the output file  
-            sourceDocument.Close();
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private static int TotalPageCount(string file)
         {
-
-            using (StreamReader sr = new StreamReader(System.IO.File.OpenRead(file)))
+            try
             {
+                if (file == @"C:\Users\PAB\Desktop\analitics\_Analytics\21132.pdf")
+                {
+                }
+                using (StreamReader sr = new StreamReader(System.IO.File.OpenRead(file)))
+                {
+                     string line= "";
+                    if (sr != null)
+                    {
+                        using (FileStream pdfStream = new FileStream(file, FileMode.Open, FileAccess.Read))
+                        {
+                            //Create a new instance of PDF document syntax analyzer.
+                            PdfDocumentAnalyzer analyzer = new PdfDocumentAnalyzer(pdfStream);
+                            //Analyze the syntax and return the results.
+                            SyntaxAnalyzerResult analyzerResult = analyzer.AnalyzeSyntax();
+                            if (analyzerResult.IsCorrupted == false && analyzerResult.Errors==null)
+                            {
 
-                string ppath = file;
-                PdfReader pdfReader = new PdfReader(ppath);
-                int numberOfPages = pdfReader.NumberOfPages;
+                                string ppath = file;
+                                string text = System.IO.File.ReadAllText(ppath);
+
+                                PdfReader pdfReader = new PdfReader(ppath);
+                                int numberOfPages = pdfReader.NumberOfPages;
 
 
 
-                Regex regex = new Regex(@"/Type\s*/Page[^s]");
-                MatchCollection matches = regex.Matches(sr.ReadToEnd());
-
-                return numberOfPages;//matches.Count;
+                                Regex regex = new Regex(@"/Type\s*/Page[^s]");
+                                MatchCollection matches = regex.Matches(sr.ReadToEnd());
+                                return numberOfPages;//matches.Count;
+                            }
+                            else
+                                return 0;
+                        }
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
     }
