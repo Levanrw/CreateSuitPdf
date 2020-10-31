@@ -1,4 +1,5 @@
-﻿using Microsoft.Reporting.WinForms;
+﻿using iTextSharp.text.pdf;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -107,10 +109,93 @@ namespace Suit
                     }
                 }
 
+                DataSet1TableAdapters.getSimplifiedProccesDocumentationTableAdapter ProccesDocumentation = new DataSet1TableAdapters.getSimplifiedProccesDocumentationTableAdapter();
+
+                ProccesDocumentation.GetData();
+                ConcatenatePDF();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        public void ConcatenatePDF()
+        {
+            List<string> FileName = new List<string>();
+            using (var db = new LegalCounselEntities())
+            {
+                var ActiveIds = db.SimpleSuitDocumentationLists.Select(m => m.ActiveID).Distinct();
+                foreach (int ActiveId in ActiveIds)
+                {
+                    var FIleNames = from st in db.SimpleSuitDocumentationLists
+                                    where st.ActiveID == ActiveId
+                                    select st.FileName;
+
+                    foreach (var _FileName in FIleNames)
+                    {
+                        FileName.Add( _FileName);
+
+                    }
+                    MergePDF(FileName, ActiveId);
+                    FileName.Clear();
+                }
+
+            }
+        }
+        private static void MergePDF(List<string> FileName, int ActiveId)
+        {
+            //string[] fileArray = new string[2];
+            //fileArray[0] = File1;
+            //fileArray[1] = File2;
+
+            PdfReader reader = null;
+            iTextSharp.text.Document sourceDocument = null;
+            PdfCopy pdfCopyProvider = null;
+            PdfImportedPage importedPage;
+            string outputPdfPath = @"C:\Users\PAB\Desktop\shanava\result\" + ActiveId.ToString() + ".pdf";
+
+            sourceDocument = new iTextSharp.text.Document();
+            pdfCopyProvider = new PdfCopy(sourceDocument, new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));
+
+            //output file Open  
+            sourceDocument.Open();
+
+
+            //files list wise Loop  
+            for (int f = 0; f < FileName.Count; f++)
+            {
+                int pages = TotalPageCount(FileName[f]);
+
+                reader = new PdfReader(FileName[f]);
+                //Add pages in new file  
+                for (int i = 1; i <= pages; i++)
+                {
+                    importedPage = pdfCopyProvider.GetImportedPage(reader, i);
+                    pdfCopyProvider.AddPage(importedPage);
+                }
+
+                reader.Close();
+            }
+            //save the output file  
+            sourceDocument.Close();
+        }
+
+        private static int TotalPageCount(string file)
+        {
+
+            using (StreamReader sr = new StreamReader(System.IO.File.OpenRead(file)))
+            {
+
+                string ppath = file;
+                PdfReader pdfReader = new PdfReader(ppath);
+                int numberOfPages = pdfReader.NumberOfPages;
+
+
+
+                Regex regex = new Regex(@"/Type\s*/Page[^s]");
+                MatchCollection matches = regex.Matches(sr.ReadToEnd());
+
+                return numberOfPages;//matches.Count;
             }
         }
     }
