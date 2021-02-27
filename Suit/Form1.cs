@@ -50,7 +50,7 @@ namespace Suit
                     GetSuitInfo1.Value = GetSuitInfo.GetData(Suits[i]);
 
                      
-                     ReportViewer _reportViewer1 = new ReportViewer();
+                     ReportViewer _reportViewer1 = new ReportViewer();// 
                     _reportViewer1.ProcessingMode = ProcessingMode.Local;
                     // var DesktopPath =  Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                     string DesktopPath = @"C:\Users\Administrator\Desktop\CreatePDF\PDF";
