@@ -12,7 +12,7 @@ namespace Suit.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,8 +26,8 @@ namespace Suit.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=188.93.95.217,1431;Initial Catalog=PDF;Persist Security Info=True;Use" +
-            "r ID=sa;Password=0key!@#")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=5.189.159.242;Initial Catalog=Analytics;Persist Security Info=True;Us" +
+            "er ID=pabuser;Password=h5OOQmQGLVo3f6VeGw8H")]
         public string PDFConnectionString {
             get {
                 return ((string)(this["PDFConnectionString"]));

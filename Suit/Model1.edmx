@@ -11,11 +11,14 @@ warning 6002: The table/view 'Analytics.dbo.SimpleSuitDocumentationList' does no
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
           <Property Name="ActiveID" Type="int" />
           <Property Name="FileName" Type="nvarchar(max)" />
           <Property Name="Priority" Type="int" />
         </EntityType>
+        <Function Name="getSimplifiedProccesData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Suitid" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="AnalyticsModelStoreContainer">
           <EntitySet Name="SimpleSuitDocumentationList" EntityType="Self.SimpleSuitDocumentationList" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -35,20 +38,61 @@ warning 6002: The table/view 'Analytics.dbo.SimpleSuitDocumentationList' does no
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
           <Property Name="ActiveID" Type="Int32" />
-          <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FileName" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="Priority" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="LegalCounselEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AnalyticsEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="SimpleSuitDocumentationLists" EntityType="Self.SimpleSuitDocumentationList" />
+          <FunctionImport Name="getSimplifiedProccesData" ReturnType="Collection(AnalyticsModel.getSimplifiedProccesData_Result)">
+            <Parameter Name="Suitid" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="getSimplifiedProccesData_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ApplicantCompany" Nullable="true" />
+          <Property Type="String" Name="ApplicantCompanyVAT" Nullable="true" />
+          <Property Type="String" Name="ApplicantCompanyAddress" Nullable="true" />
+          <Property Type="String" Name="ApplicantCompanyTel" Nullable="true" />
+          <Property Type="String" Name="ApplicantCompanyEmailAddress" Nullable="true" />
+          <Property Type="String" Name="ApplicantCompanyAccountNumber" Nullable="true" />
+          <Property Type="String" Name="ApplicantCompanyAccountBankCode" Nullable="true" />
+          <Property Type="String" Name="ApplicantRepresentatorCompany" Nullable="true" />
+          <Property Type="String" Name="ApplicantRepresentatorName" Nullable="true" />
+          <Property Type="String" Name="ApplicantRepresentatorPN" Nullable="true" />
+          <Property Type="String" Name="ApplicantRepresentatorCompanyAddress" Nullable="true" />
+          <Property Type="String" Name="ApplicantRepresentatorCompanyTel" Nullable="true" />
+          <Property Type="String" Name="ApplicantRepresentatorEmailAddress" Nullable="true" />
+          <Property Type="String" Name="RespodentName" Nullable="true" />
+          <Property Type="String" Name="RespodentPN" Nullable="true" />
+          <Property Type="String" Name="RespondentAddresses" Nullable="true" />
+          <Property Type="String" Name="RespodentTels" Nullable="true" />
+          <Property Type="String" Name="RespodentOtherInfo" Nullable="true" />
+          <Property Type="Int32" Name="RequestSolidarity" Nullable="false" />
+          <Property Type="Int32" Name="ObligationSolidarity" Nullable="false" />
+          <Property Type="String" Name="SuitRequest" Nullable="true" />
+          <Property Type="String" Name="RequestSuitBase" Nullable="true" />
+          <Property Type="String" Name="RequestSuitInterest" Nullable="true" />
+          <Property Type="String" Name="RequestSuitPenalty" Nullable="true" />
+          <Property Type="String" Name="RequestOtherFees" Nullable="true" />
+          <Property Type="String" Name="DocumentationList" Nullable="true" />
+          <Property Type="Int32" Name="DependOnResponce" Nullable="false" />
+          <Property Type="Int32" Name="ImmediateExecution" Nullable="false" />
+          <Property Type="Int32" Name="SeizeCollateral" Nullable="false" />
+          <Property Type="String" Name="CollateralList" Nullable="false" MaxLength="1" />
+          <Property Type="Int32" Name="LoanID" Nullable="true" />
+          <Property Type="DateTime" Name="InsertDate" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="Isready" Nullable="false" />
+          <Property Type="String" Name="Comment" Nullable="true" />
+          <Property Type="Int32" Name="SuitTypeID" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="AnalyticsModelStoreContainer" CdmEntityContainer="LegalCounselEntities">
+        <EntityContainerMapping StorageEntityContainer="AnalyticsModelStoreContainer" CdmEntityContainer="AnalyticsEntities">
           <EntitySetMapping Name="SimpleSuitDocumentationLists">
             <EntityTypeMapping TypeName="AnalyticsModel.SimpleSuitDocumentationList">
               <MappingFragment StoreEntitySet="SimpleSuitDocumentationList">
@@ -59,6 +103,48 @@ warning 6002: The table/view 'Analytics.dbo.SimpleSuitDocumentationList' does no
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="getSimplifiedProccesData" FunctionName="AnalyticsModel.Store.getSimplifiedProccesData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AnalyticsModel.getSimplifiedProccesData_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ApplicantCompany" ColumnName="ApplicantCompany" />
+                <ScalarProperty Name="ApplicantCompanyVAT" ColumnName="ApplicantCompanyVAT" />
+                <ScalarProperty Name="ApplicantCompanyAddress" ColumnName="ApplicantCompanyAddress" />
+                <ScalarProperty Name="ApplicantCompanyTel" ColumnName="ApplicantCompanyTel" />
+                <ScalarProperty Name="ApplicantCompanyEmailAddress" ColumnName="ApplicantCompanyEmailAddress" />
+                <ScalarProperty Name="ApplicantCompanyAccountNumber" ColumnName="ApplicantCompanyAccountNumber" />
+                <ScalarProperty Name="ApplicantCompanyAccountBankCode" ColumnName="ApplicantCompanyAccountBankCode" />
+                <ScalarProperty Name="ApplicantRepresentatorCompany" ColumnName="ApplicantRepresentatorCompany" />
+                <ScalarProperty Name="ApplicantRepresentatorName" ColumnName="ApplicantRepresentatorName" />
+                <ScalarProperty Name="ApplicantRepresentatorPN" ColumnName="ApplicantRepresentatorPN" />
+                <ScalarProperty Name="ApplicantRepresentatorCompanyAddress" ColumnName="ApplicantRepresentatorCompanyAddress" />
+                <ScalarProperty Name="ApplicantRepresentatorCompanyTel" ColumnName="ApplicantRepresentatorCompanyTel" />
+                <ScalarProperty Name="ApplicantRepresentatorEmailAddress" ColumnName="ApplicantRepresentatorEmailAddress" />
+                <ScalarProperty Name="RespodentName" ColumnName="RespodentName" />
+                <ScalarProperty Name="RespodentPN" ColumnName="RespodentPN" />
+                <ScalarProperty Name="RespondentAddresses" ColumnName="RespondentAddresses" />
+                <ScalarProperty Name="RespodentTels" ColumnName="RespodentTels" />
+                <ScalarProperty Name="RespodentOtherInfo" ColumnName="RespodentOtherInfo" />
+                <ScalarProperty Name="RequestSolidarity" ColumnName="RequestSolidarity" />
+                <ScalarProperty Name="ObligationSolidarity" ColumnName="ObligationSolidarity" />
+                <ScalarProperty Name="SuitRequest" ColumnName="SuitRequest" />
+                <ScalarProperty Name="RequestSuitBase" ColumnName="RequestSuitBase" />
+                <ScalarProperty Name="RequestSuitInterest" ColumnName="RequestSuitInterest" />
+                <ScalarProperty Name="RequestSuitPenalty" ColumnName="RequestSuitPenalty" />
+                <ScalarProperty Name="RequestOtherFees" ColumnName="RequestOtherFees" />
+                <ScalarProperty Name="DocumentationList" ColumnName="DocumentationList" />
+                <ScalarProperty Name="DependOnResponce" ColumnName="DependOnResponce" />
+                <ScalarProperty Name="ImmediateExecution" ColumnName="ImmediateExecution" />
+                <ScalarProperty Name="SeizeCollateral" ColumnName="SeizeCollateral" />
+                <ScalarProperty Name="CollateralList" ColumnName="CollateralList" />
+                <ScalarProperty Name="LoanID" ColumnName="LoanID" />
+                <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+                <ScalarProperty Name="Isready" ColumnName="Isready" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="SuitTypeID" ColumnName="SuitTypeID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

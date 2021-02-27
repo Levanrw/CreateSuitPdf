@@ -12,11 +12,13 @@ namespace Suit
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
-    public partial class LegalCounselEntities : DbContext
+    public partial class AnalyticsEntities : DbContext
     {
-        public LegalCounselEntities()
-            : base("name=LegalCounselEntities")
+        public AnalyticsEntities()
+            : base("name=AnalyticsEntities")
         {
         }
     
@@ -26,5 +28,14 @@ namespace Suit
         }
     
         public virtual DbSet<SimpleSuitDocumentationList> SimpleSuitDocumentationLists { get; set; }
+    
+        public virtual ObjectResult<getSimplifiedProccesData_Result> getSimplifiedProccesData(Nullable<int> suitid)
+        {
+            var suitidParameter = suitid.HasValue ?
+                new ObjectParameter("Suitid", suitid) :
+                new ObjectParameter("Suitid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getSimplifiedProccesData_Result>("getSimplifiedProccesData", suitidParameter);
+        }
     }
 }

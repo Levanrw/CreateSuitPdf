@@ -1,5 +1,6 @@
 ﻿using iTextSharp.text.pdf;
 using Microsoft.Reporting.WinForms;
+using PdfSharp.Pdf.IO;
 using Syncfusion.Pdf.Parsing;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PdfReader = iTextSharp.text.pdf.PdfReader;
 
 namespace Suit
 {
@@ -50,14 +52,15 @@ namespace Suit
                      
                      ReportViewer _reportViewer1 = new ReportViewer();
                     _reportViewer1.ProcessingMode = ProcessingMode.Local;
-                    var DesktopPath =  Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    // var DesktopPath =  Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    string DesktopPath = @"C:\Users\Administrator\Desktop\CreatePDF\PDF";
                     string _Path = Directory.GetCurrentDirectory();
 
                    // _Path = _Path.Replace(@"bin\Debug", "Suit.rdlc");
                     //chemi
                    // _reportViewer1.LocalReport.ReportPath =  @"C:\Users\admin\Desktop\LevanProjects\CreatePdf\Suit\Suit.rdlc";
                     //gio   C:\Users\PAB\Desktop\suit
-                    _reportViewer1.LocalReport.ReportPath = @"C:\Users\PAB\Desktop\suit\Suit.rdlc";
+                    _reportViewer1.LocalReport.ReportPath = @"C:\Users\Administrator\Desktop\CreatePDF\RDLC\Suit.rdlc";
 
                     _reportViewer1.RefreshReport();
                     _reportViewer1.Clear();
@@ -97,7 +100,7 @@ namespace Suit
                         throw new Exception(ex.InnerException.ToString());
                     }
 
-                    using (FileStream fs = new FileStream(DesktopPath +@"\SuitPDF\"+ Suits[i] + ".PDF", FileMode.Create))
+                    using (FileStream fs = new FileStream(DesktopPath +@"\"+ Suits[i] + ".PDF", FileMode.Create))
                     //using (FileStream fs = new FileStream(@"C:\Users\admin\Desktop\hotels\" + Suits[i].ToString() + "_" + DateTime.Now.ToString("dd.MM.yyyy") + ".PDF", FileMode.Create))
                     {
                         fs.Write(bytesa, 0, bytesa.Length);
@@ -110,7 +113,7 @@ namespace Suit
                     }
                 }
 
-                DataSet1TableAdapters.getSimplifiedProccesDocumentationTableAdapter ProccesDocumentation = new DataSet1TableAdapters.getSimplifiedProccesDocumentationTableAdapter();
+                DataSet1TableAdapters.getSimplifiedProccesDoucmentationTableAdapter ProccesDocumentation = new DataSet1TableAdapters.getSimplifiedProccesDoucmentationTableAdapter();
 
                 ProccesDocumentation.GetData();
                 ConcatenatePDF();
@@ -125,14 +128,14 @@ namespace Suit
             try
             {
                 List<string> FileName = new List<string>();
-                using (var db = new LegalCounselEntities())
+                using (var db = new AnalyticsEntities())
                 {
                     var ActiveIds = db.SimpleSuitDocumentationLists.Select(m => m.ActiveID).Distinct();
                     foreach (int ActiveId in ActiveIds)
                     {
-                        var FIleNames = from st in db.SimpleSuitDocumentationLists
-                                        where st.ActiveID == ActiveId
-                                        select st.FileName;
+                        var FIleNames = (from st in db.SimpleSuitDocumentationLists orderby st.Priority
+                                         where st.ActiveID == ActiveId
+                                         select st.FileName);
 
                         foreach (var _FileName in FIleNames)
                         {
@@ -163,7 +166,8 @@ namespace Suit
                 iTextSharp.text.Document sourceDocument = null;
                 PdfCopy pdfCopyProvider = null;
                 PdfImportedPage importedPage;
-                string outputPdfPath = @"C:\Users\PAB\Desktop\shanava\result\" + ActiveId.ToString() + ".pdf";
+                // string outputPdfPath = @"D:\SyncData\DeltaMDocuments\SymplifiedSuits\" + ActiveId.ToString() + ".pdf";
+                string outputPdfPath = @"C:\DeltaM\CRM\ClientsDocuments\SymplifiedSuits\" + ActiveId.ToString() + ".pdf";
 
                 sourceDocument = new iTextSharp.text.Document();
                 pdfCopyProvider = new PdfCopy(sourceDocument, new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));

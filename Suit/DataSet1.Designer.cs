@@ -26,7 +26,7 @@ namespace Suit {
         
         private getSimplifiedProccesDataDataTable tablegetSimplifiedProccesData;
         
-        private getSimplifiedProccesDocumentationDataTable tablegetSimplifiedProccesDocumentation;
+        private getSimplifiedProccesDoucmentationDataTable tablegetSimplifiedProccesDoucmentation;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -59,8 +59,8 @@ namespace Suit {
                 if ((ds.Tables["getSimplifiedProccesData"] != null)) {
                     base.Tables.Add(new getSimplifiedProccesDataDataTable(ds.Tables["getSimplifiedProccesData"]));
                 }
-                if ((ds.Tables["getSimplifiedProccesDocumentation"] != null)) {
-                    base.Tables.Add(new getSimplifiedProccesDocumentationDataTable(ds.Tables["getSimplifiedProccesDocumentation"]));
+                if ((ds.Tables["getSimplifiedProccesDoucmentation"] != null)) {
+                    base.Tables.Add(new getSimplifiedProccesDoucmentationDataTable(ds.Tables["getSimplifiedProccesDoucmentation"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,9 +94,9 @@ namespace Suit {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public getSimplifiedProccesDocumentationDataTable getSimplifiedProccesDocumentation {
+        public getSimplifiedProccesDoucmentationDataTable getSimplifiedProccesDoucmentation {
             get {
-                return this.tablegetSimplifiedProccesDocumentation;
+                return this.tablegetSimplifiedProccesDoucmentation;
             }
         }
         
@@ -170,8 +170,8 @@ namespace Suit {
                 if ((ds.Tables["getSimplifiedProccesData"] != null)) {
                     base.Tables.Add(new getSimplifiedProccesDataDataTable(ds.Tables["getSimplifiedProccesData"]));
                 }
-                if ((ds.Tables["getSimplifiedProccesDocumentation"] != null)) {
-                    base.Tables.Add(new getSimplifiedProccesDocumentationDataTable(ds.Tables["getSimplifiedProccesDocumentation"]));
+                if ((ds.Tables["getSimplifiedProccesDoucmentation"] != null)) {
+                    base.Tables.Add(new getSimplifiedProccesDoucmentationDataTable(ds.Tables["getSimplifiedProccesDoucmentation"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -212,10 +212,10 @@ namespace Suit {
                     this.tablegetSimplifiedProccesData.InitVars();
                 }
             }
-            this.tablegetSimplifiedProccesDocumentation = ((getSimplifiedProccesDocumentationDataTable)(base.Tables["getSimplifiedProccesDocumentation"]));
+            this.tablegetSimplifiedProccesDoucmentation = ((getSimplifiedProccesDoucmentationDataTable)(base.Tables["getSimplifiedProccesDoucmentation"]));
             if ((initTable == true)) {
-                if ((this.tablegetSimplifiedProccesDocumentation != null)) {
-                    this.tablegetSimplifiedProccesDocumentation.InitVars();
+                if ((this.tablegetSimplifiedProccesDoucmentation != null)) {
+                    this.tablegetSimplifiedProccesDoucmentation.InitVars();
                 }
             }
         }
@@ -230,8 +230,8 @@ namespace Suit {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablegetSimplifiedProccesData = new getSimplifiedProccesDataDataTable();
             base.Tables.Add(this.tablegetSimplifiedProccesData);
-            this.tablegetSimplifiedProccesDocumentation = new getSimplifiedProccesDocumentationDataTable();
-            base.Tables.Add(this.tablegetSimplifiedProccesDocumentation);
+            this.tablegetSimplifiedProccesDoucmentation = new getSimplifiedProccesDoucmentationDataTable();
+            base.Tables.Add(this.tablegetSimplifiedProccesDoucmentation);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -242,7 +242,7 @@ namespace Suit {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializegetSimplifiedProccesDocumentation() {
+        private bool ShouldSerializegetSimplifiedProccesDoucmentation() {
             return false;
         }
         
@@ -305,7 +305,7 @@ namespace Suit {
         public delegate void getSimplifiedProccesDataRowChangeEventHandler(object sender, getSimplifiedProccesDataRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void getSimplifiedProccesDocumentationRowChangeEventHandler(object sender, getSimplifiedProccesDocumentationRowChangeEvent e);
+        public delegate void getSimplifiedProccesDoucmentationRowChangeEventHandler(object sender, getSimplifiedProccesDoucmentationRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -342,13 +342,15 @@ namespace Suit {
             
             private global::System.Data.DataColumn columnApplicantRepresentatorEmailAddress;
             
-            private global::System.Data.DataColumn columnRespondentName;
+            private global::System.Data.DataColumn columnRespodentName;
+            
+            private global::System.Data.DataColumn columnRespodentPN;
             
             private global::System.Data.DataColumn columnRespondentAddresses;
             
-            private global::System.Data.DataColumn columnRespondentTels;
+            private global::System.Data.DataColumn columnRespodentTels;
             
-            private global::System.Data.DataColumn columnRespondentOtherInfo;
+            private global::System.Data.DataColumn columnRespodentOtherInfo;
             
             private global::System.Data.DataColumn columnRequestSolidarity;
             
@@ -373,6 +375,16 @@ namespace Suit {
             private global::System.Data.DataColumn columnSeizeCollateral;
             
             private global::System.Data.DataColumn columnCollateralList;
+            
+            private global::System.Data.DataColumn columnLoanID;
+            
+            private global::System.Data.DataColumn columnInsertDate;
+            
+            private global::System.Data.DataColumn columnIsready;
+            
+            private global::System.Data.DataColumn columnComment;
+            
+            private global::System.Data.DataColumn columnSuitTypeID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -521,9 +533,17 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn RespondentNameColumn {
+            public global::System.Data.DataColumn RespodentNameColumn {
                 get {
-                    return this.columnRespondentName;
+                    return this.columnRespodentName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn RespodentPNColumn {
+                get {
+                    return this.columnRespodentPN;
                 }
             }
             
@@ -537,17 +557,17 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn RespondentTelsColumn {
+            public global::System.Data.DataColumn RespodentTelsColumn {
                 get {
-                    return this.columnRespondentTels;
+                    return this.columnRespodentTels;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn RespondentOtherInfoColumn {
+            public global::System.Data.DataColumn RespodentOtherInfoColumn {
                 get {
-                    return this.columnRespondentOtherInfo;
+                    return this.columnRespodentOtherInfo;
                 }
             }
             
@@ -649,6 +669,46 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LoanIDColumn {
+                get {
+                    return this.columnLoanID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn InsertDateColumn {
+                get {
+                    return this.columnInsertDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IsreadyColumn {
+                get {
+                    return this.columnIsready;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CommentColumn {
+                get {
+                    return this.columnComment;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SuitTypeIDColumn {
+                get {
+                    return this.columnSuitTypeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -698,22 +758,28 @@ namespace Suit {
                         string ApplicantRepresentatorCompanyAddress, 
                         string ApplicantRepresentatorCompanyTel, 
                         string ApplicantRepresentatorEmailAddress, 
-                        string RespondentName, 
+                        string RespodentName, 
+                        string RespodentPN, 
                         string RespondentAddresses, 
-                        string RespondentTels, 
-                        string RespondentOtherInfo, 
-                        bool RequestSolidarity, 
-                        bool ObligationSolidarity, 
+                        string RespodentTels, 
+                        string RespodentOtherInfo, 
+                        int RequestSolidarity, 
+                        int ObligationSolidarity, 
                         string SuitRequest, 
                         string RequestSuitBase, 
                         string RequestSuitInterest, 
                         string RequestSuitPenalty, 
                         string RequestOtherFees, 
                         string DocumentationList, 
-                        bool DependOnResponce, 
-                        bool ImmediateExecution, 
-                        bool SeizeCollateral, 
-                        string CollateralList) {
+                        int DependOnResponce, 
+                        int ImmediateExecution, 
+                        int SeizeCollateral, 
+                        string CollateralList, 
+                        int LoanID, 
+                        System.DateTime InsertDate, 
+                        int Isready, 
+                        string Comment, 
+                        int SuitTypeID) {
                 getSimplifiedProccesDataRow rowgetSimplifiedProccesDataRow = ((getSimplifiedProccesDataRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -730,10 +796,11 @@ namespace Suit {
                         ApplicantRepresentatorCompanyAddress,
                         ApplicantRepresentatorCompanyTel,
                         ApplicantRepresentatorEmailAddress,
-                        RespondentName,
+                        RespodentName,
+                        RespodentPN,
                         RespondentAddresses,
-                        RespondentTels,
-                        RespondentOtherInfo,
+                        RespodentTels,
+                        RespodentOtherInfo,
                         RequestSolidarity,
                         ObligationSolidarity,
                         SuitRequest,
@@ -745,17 +812,15 @@ namespace Suit {
                         DependOnResponce,
                         ImmediateExecution,
                         SeizeCollateral,
-                        CollateralList};
+                        CollateralList,
+                        LoanID,
+                        InsertDate,
+                        Isready,
+                        Comment,
+                        SuitTypeID};
                 rowgetSimplifiedProccesDataRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowgetSimplifiedProccesDataRow);
                 return rowgetSimplifiedProccesDataRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public getSimplifiedProccesDataRow FindByID(int ID) {
-                return ((getSimplifiedProccesDataRow)(this.Rows.Find(new object[] {
-                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -789,10 +854,11 @@ namespace Suit {
                 this.columnApplicantRepresentatorCompanyAddress = base.Columns["ApplicantRepresentatorCompanyAddress"];
                 this.columnApplicantRepresentatorCompanyTel = base.Columns["ApplicantRepresentatorCompanyTel"];
                 this.columnApplicantRepresentatorEmailAddress = base.Columns["ApplicantRepresentatorEmailAddress"];
-                this.columnRespondentName = base.Columns["RespondentName"];
+                this.columnRespodentName = base.Columns["RespodentName"];
+                this.columnRespodentPN = base.Columns["RespodentPN"];
                 this.columnRespondentAddresses = base.Columns["RespondentAddresses"];
-                this.columnRespondentTels = base.Columns["RespondentTels"];
-                this.columnRespondentOtherInfo = base.Columns["RespondentOtherInfo"];
+                this.columnRespodentTels = base.Columns["RespodentTels"];
+                this.columnRespodentOtherInfo = base.Columns["RespodentOtherInfo"];
                 this.columnRequestSolidarity = base.Columns["RequestSolidarity"];
                 this.columnObligationSolidarity = base.Columns["ObligationSolidarity"];
                 this.columnSuitRequest = base.Columns["SuitRequest"];
@@ -805,6 +871,11 @@ namespace Suit {
                 this.columnImmediateExecution = base.Columns["ImmediateExecution"];
                 this.columnSeizeCollateral = base.Columns["SeizeCollateral"];
                 this.columnCollateralList = base.Columns["CollateralList"];
+                this.columnLoanID = base.Columns["LoanID"];
+                this.columnInsertDate = base.Columns["InsertDate"];
+                this.columnIsready = base.Columns["Isready"];
+                this.columnComment = base.Columns["Comment"];
+                this.columnSuitTypeID = base.Columns["SuitTypeID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -838,17 +909,19 @@ namespace Suit {
                 base.Columns.Add(this.columnApplicantRepresentatorCompanyTel);
                 this.columnApplicantRepresentatorEmailAddress = new global::System.Data.DataColumn("ApplicantRepresentatorEmailAddress", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnApplicantRepresentatorEmailAddress);
-                this.columnRespondentName = new global::System.Data.DataColumn("RespondentName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRespondentName);
+                this.columnRespodentName = new global::System.Data.DataColumn("RespodentName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRespodentName);
+                this.columnRespodentPN = new global::System.Data.DataColumn("RespodentPN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRespodentPN);
                 this.columnRespondentAddresses = new global::System.Data.DataColumn("RespondentAddresses", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRespondentAddresses);
-                this.columnRespondentTels = new global::System.Data.DataColumn("RespondentTels", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRespondentTels);
-                this.columnRespondentOtherInfo = new global::System.Data.DataColumn("RespondentOtherInfo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRespondentOtherInfo);
-                this.columnRequestSolidarity = new global::System.Data.DataColumn("RequestSolidarity", typeof(bool), null, global::System.Data.MappingType.Element);
+                this.columnRespodentTels = new global::System.Data.DataColumn("RespodentTels", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRespodentTels);
+                this.columnRespodentOtherInfo = new global::System.Data.DataColumn("RespodentOtherInfo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRespodentOtherInfo);
+                this.columnRequestSolidarity = new global::System.Data.DataColumn("RequestSolidarity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRequestSolidarity);
-                this.columnObligationSolidarity = new global::System.Data.DataColumn("ObligationSolidarity", typeof(bool), null, global::System.Data.MappingType.Element);
+                this.columnObligationSolidarity = new global::System.Data.DataColumn("ObligationSolidarity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnObligationSolidarity);
                 this.columnSuitRequest = new global::System.Data.DataColumn("SuitRequest", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSuitRequest);
@@ -862,75 +935,38 @@ namespace Suit {
                 base.Columns.Add(this.columnRequestOtherFees);
                 this.columnDocumentationList = new global::System.Data.DataColumn("DocumentationList", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDocumentationList);
-                this.columnDependOnResponce = new global::System.Data.DataColumn("DependOnResponce", typeof(bool), null, global::System.Data.MappingType.Element);
+                this.columnDependOnResponce = new global::System.Data.DataColumn("DependOnResponce", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDependOnResponce);
-                this.columnImmediateExecution = new global::System.Data.DataColumn("ImmediateExecution", typeof(bool), null, global::System.Data.MappingType.Element);
+                this.columnImmediateExecution = new global::System.Data.DataColumn("ImmediateExecution", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImmediateExecution);
-                this.columnSeizeCollateral = new global::System.Data.DataColumn("SeizeCollateral", typeof(bool), null, global::System.Data.MappingType.Element);
+                this.columnSeizeCollateral = new global::System.Data.DataColumn("SeizeCollateral", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSeizeCollateral);
                 this.columnCollateralList = new global::System.Data.DataColumn("CollateralList", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCollateralList);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
+                this.columnLoanID = new global::System.Data.DataColumn("LoanID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLoanID);
+                this.columnInsertDate = new global::System.Data.DataColumn("InsertDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInsertDate);
+                this.columnIsready = new global::System.Data.DataColumn("Isready", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsready);
+                this.columnComment = new global::System.Data.DataColumn("Comment", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComment);
+                this.columnSuitTypeID = new global::System.Data.DataColumn("SuitTypeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSuitTypeID);
                 this.columnID.AutoIncrement = true;
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
-                this.columnID.Unique = true;
-                this.columnApplicantCompany.AllowDBNull = false;
-                this.columnApplicantCompany.MaxLength = 255;
-                this.columnApplicantCompanyVAT.ReadOnly = true;
-                this.columnApplicantCompanyVAT.MaxLength = 266;
-                this.columnApplicantCompanyAddress.AllowDBNull = false;
-                this.columnApplicantCompanyAddress.MaxLength = 255;
-                this.columnApplicantCompanyTel.AllowDBNull = false;
-                this.columnApplicantCompanyTel.MaxLength = 255;
-                this.columnApplicantCompanyEmailAddress.AllowDBNull = false;
-                this.columnApplicantCompanyEmailAddress.MaxLength = 255;
-                this.columnApplicantCompanyAccountNumber.AllowDBNull = false;
-                this.columnApplicantCompanyAccountNumber.MaxLength = 255;
-                this.columnApplicantCompanyAccountBankCode.AllowDBNull = false;
-                this.columnApplicantCompanyAccountBankCode.MaxLength = 255;
-                this.columnApplicantRepresentatorCompany.AllowDBNull = false;
-                this.columnApplicantRepresentatorCompany.MaxLength = 255;
-                this.columnApplicantRepresentatorName.AllowDBNull = false;
-                this.columnApplicantRepresentatorName.MaxLength = 255;
-                this.columnApplicantRepresentatorPN.ReadOnly = true;
-                this.columnApplicantRepresentatorPN.MaxLength = 266;
-                this.columnApplicantRepresentatorCompanyAddress.AllowDBNull = false;
-                this.columnApplicantRepresentatorCompanyAddress.MaxLength = 255;
-                this.columnApplicantRepresentatorCompanyTel.AllowDBNull = false;
-                this.columnApplicantRepresentatorCompanyTel.MaxLength = 255;
-                this.columnApplicantRepresentatorEmailAddress.AllowDBNull = false;
-                this.columnApplicantRepresentatorEmailAddress.MaxLength = 255;
-                this.columnRespondentName.AllowDBNull = false;
-                this.columnRespondentName.MaxLength = 2147483647;
-                this.columnRespondentAddresses.AllowDBNull = false;
-                this.columnRespondentAddresses.MaxLength = 2147483647;
-                this.columnRespondentTels.AllowDBNull = false;
-                this.columnRespondentTels.MaxLength = 2147483647;
-                this.columnRespondentOtherInfo.AllowDBNull = false;
-                this.columnRespondentOtherInfo.MaxLength = 2147483647;
                 this.columnRequestSolidarity.AllowDBNull = false;
                 this.columnObligationSolidarity.AllowDBNull = false;
-                this.columnSuitRequest.AllowDBNull = false;
-                this.columnSuitRequest.MaxLength = 2147483647;
-                this.columnRequestSuitBase.AllowDBNull = false;
-                this.columnRequestSuitBase.MaxLength = 255;
-                this.columnRequestSuitInterest.AllowDBNull = false;
-                this.columnRequestSuitInterest.MaxLength = 255;
-                this.columnRequestSuitPenalty.AllowDBNull = false;
-                this.columnRequestSuitPenalty.MaxLength = 255;
-                this.columnRequestOtherFees.AllowDBNull = false;
-                this.columnRequestOtherFees.MaxLength = 255;
-                this.columnDocumentationList.AllowDBNull = false;
-                this.columnDocumentationList.MaxLength = 2147483647;
                 this.columnDependOnResponce.AllowDBNull = false;
                 this.columnImmediateExecution.AllowDBNull = false;
                 this.columnSeizeCollateral.AllowDBNull = false;
                 this.columnCollateralList.AllowDBNull = false;
-                this.columnCollateralList.MaxLength = 2147483647;
+                this.columnInsertDate.AllowDBNull = false;
+                this.columnIsready.AllowDBNull = false;
+                this.columnSuitTypeID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1062,12 +1098,12 @@ namespace Suit {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class getSimplifiedProccesDocumentationDataTable : global::System.Data.TypedTableBase<getSimplifiedProccesDocumentationRow> {
+        public partial class getSimplifiedProccesDoucmentationDataTable : global::System.Data.TypedTableBase<getSimplifiedProccesDoucmentationRow> {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public getSimplifiedProccesDocumentationDataTable() {
-                this.TableName = "getSimplifiedProccesDocumentation";
+            public getSimplifiedProccesDoucmentationDataTable() {
+                this.TableName = "getSimplifiedProccesDoucmentation";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1075,7 +1111,7 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal getSimplifiedProccesDocumentationDataTable(global::System.Data.DataTable table) {
+            internal getSimplifiedProccesDoucmentationDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1092,7 +1128,7 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected getSimplifiedProccesDocumentationDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected getSimplifiedProccesDoucmentationDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1108,44 +1144,44 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public getSimplifiedProccesDocumentationRow this[int index] {
+            public getSimplifiedProccesDoucmentationRow this[int index] {
                 get {
-                    return ((getSimplifiedProccesDocumentationRow)(this.Rows[index]));
+                    return ((getSimplifiedProccesDoucmentationRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event getSimplifiedProccesDocumentationRowChangeEventHandler getSimplifiedProccesDocumentationRowChanging;
+            public event getSimplifiedProccesDoucmentationRowChangeEventHandler getSimplifiedProccesDoucmentationRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event getSimplifiedProccesDocumentationRowChangeEventHandler getSimplifiedProccesDocumentationRowChanged;
+            public event getSimplifiedProccesDoucmentationRowChangeEventHandler getSimplifiedProccesDoucmentationRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event getSimplifiedProccesDocumentationRowChangeEventHandler getSimplifiedProccesDocumentationRowDeleting;
+            public event getSimplifiedProccesDoucmentationRowChangeEventHandler getSimplifiedProccesDoucmentationRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event getSimplifiedProccesDocumentationRowChangeEventHandler getSimplifiedProccesDocumentationRowDeleted;
+            public event getSimplifiedProccesDoucmentationRowChangeEventHandler getSimplifiedProccesDoucmentationRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddgetSimplifiedProccesDocumentationRow(getSimplifiedProccesDocumentationRow row) {
+            public void AddgetSimplifiedProccesDoucmentationRow(getSimplifiedProccesDoucmentationRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public getSimplifiedProccesDocumentationRow AddgetSimplifiedProccesDocumentationRow() {
-                getSimplifiedProccesDocumentationRow rowgetSimplifiedProccesDocumentationRow = ((getSimplifiedProccesDocumentationRow)(this.NewRow()));
+            public getSimplifiedProccesDoucmentationRow AddgetSimplifiedProccesDoucmentationRow() {
+                getSimplifiedProccesDoucmentationRow rowgetSimplifiedProccesDoucmentationRow = ((getSimplifiedProccesDoucmentationRow)(this.NewRow()));
                 object[] columnValuesArray = new object[0];
-                rowgetSimplifiedProccesDocumentationRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowgetSimplifiedProccesDocumentationRow);
-                return rowgetSimplifiedProccesDocumentationRow;
+                rowgetSimplifiedProccesDoucmentationRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowgetSimplifiedProccesDoucmentationRow);
+                return rowgetSimplifiedProccesDoucmentationRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                getSimplifiedProccesDocumentationDataTable cln = ((getSimplifiedProccesDocumentationDataTable)(base.Clone()));
+                getSimplifiedProccesDoucmentationDataTable cln = ((getSimplifiedProccesDoucmentationDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1153,7 +1189,7 @@ namespace Suit {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new getSimplifiedProccesDocumentationDataTable();
+                return new getSimplifiedProccesDoucmentationDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1168,28 +1204,28 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public getSimplifiedProccesDocumentationRow NewgetSimplifiedProccesDocumentationRow() {
-                return ((getSimplifiedProccesDocumentationRow)(this.NewRow()));
+            public getSimplifiedProccesDoucmentationRow NewgetSimplifiedProccesDoucmentationRow() {
+                return ((getSimplifiedProccesDoucmentationRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new getSimplifiedProccesDocumentationRow(builder);
+                return new getSimplifiedProccesDoucmentationRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(getSimplifiedProccesDocumentationRow);
+                return typeof(getSimplifiedProccesDoucmentationRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.getSimplifiedProccesDocumentationRowChanged != null)) {
-                    this.getSimplifiedProccesDocumentationRowChanged(this, new getSimplifiedProccesDocumentationRowChangeEvent(((getSimplifiedProccesDocumentationRow)(e.Row)), e.Action));
+                if ((this.getSimplifiedProccesDoucmentationRowChanged != null)) {
+                    this.getSimplifiedProccesDoucmentationRowChanged(this, new getSimplifiedProccesDoucmentationRowChangeEvent(((getSimplifiedProccesDoucmentationRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1197,8 +1233,8 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.getSimplifiedProccesDocumentationRowChanging != null)) {
-                    this.getSimplifiedProccesDocumentationRowChanging(this, new getSimplifiedProccesDocumentationRowChangeEvent(((getSimplifiedProccesDocumentationRow)(e.Row)), e.Action));
+                if ((this.getSimplifiedProccesDoucmentationRowChanging != null)) {
+                    this.getSimplifiedProccesDoucmentationRowChanging(this, new getSimplifiedProccesDoucmentationRowChangeEvent(((getSimplifiedProccesDoucmentationRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1206,8 +1242,8 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.getSimplifiedProccesDocumentationRowDeleted != null)) {
-                    this.getSimplifiedProccesDocumentationRowDeleted(this, new getSimplifiedProccesDocumentationRowChangeEvent(((getSimplifiedProccesDocumentationRow)(e.Row)), e.Action));
+                if ((this.getSimplifiedProccesDoucmentationRowDeleted != null)) {
+                    this.getSimplifiedProccesDoucmentationRowDeleted(this, new getSimplifiedProccesDoucmentationRowChangeEvent(((getSimplifiedProccesDoucmentationRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1215,14 +1251,14 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.getSimplifiedProccesDocumentationRowDeleting != null)) {
-                    this.getSimplifiedProccesDocumentationRowDeleting(this, new getSimplifiedProccesDocumentationRowChangeEvent(((getSimplifiedProccesDocumentationRow)(e.Row)), e.Action));
+                if ((this.getSimplifiedProccesDoucmentationRowDeleting != null)) {
+                    this.getSimplifiedProccesDoucmentationRowDeleting(this, new getSimplifiedProccesDoucmentationRowChangeEvent(((getSimplifiedProccesDoucmentationRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovegetSimplifiedProccesDocumentationRow(getSimplifiedProccesDocumentationRow row) {
+            public void RemovegetSimplifiedProccesDoucmentationRow(getSimplifiedProccesDoucmentationRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1249,7 +1285,7 @@ namespace Suit {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "getSimplifiedProccesDocumentationDataTable";
+                attribute2.FixedValue = "getSimplifiedProccesDoucmentationDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1319,7 +1355,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ApplicantCompany {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApplicantCompany\' in table \'getSimplifiedProccesData\' is DB" +
+                                "Null.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ApplicantCompanyColumn] = value;
@@ -1347,7 +1389,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ApplicantCompanyAddress {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyAddressColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyAddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApplicantCompanyAddress\' in table \'getSimplifiedProccesData" +
+                                "\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ApplicantCompanyAddressColumn] = value;
@@ -1358,7 +1406,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ApplicantCompanyTel {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyTelColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyTelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApplicantCompanyTel\' in table \'getSimplifiedProccesData\' is" +
+                                " DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ApplicantCompanyTelColumn] = value;
@@ -1369,7 +1423,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ApplicantCompanyEmailAddress {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyEmailAddressColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyEmailAddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApplicantCompanyEmailAddress\' in table \'getSimplifiedProcce" +
+                                "sData\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ApplicantCompanyEmailAddressColumn] = value;
@@ -1380,7 +1440,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ApplicantCompanyAccountNumber {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyAccountNumberColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyAccountNumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApplicantCompanyAccountNumber\' in table \'getSimplifiedProcc" +
+                                "esData\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ApplicantCompanyAccountNumberColumn] = value;
@@ -1391,7 +1457,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ApplicantCompanyAccountBankCode {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyAccountBankCodeColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantCompanyAccountBankCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApplicantCompanyAccountBankCode\' in table \'getSimplifiedPro" +
+                                "ccesData\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ApplicantCompanyAccountBankCodeColumn] = value;
@@ -1402,7 +1474,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ApplicantRepresentatorCompany {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApplicantRepresentatorCompany\' in table \'getSimplifiedProcc" +
+                                "esData\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyColumn] = value;
@@ -1413,7 +1491,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ApplicantRepresentatorName {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorNameColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApplicantRepresentatorName\' in table \'getSimplifiedProccesD" +
+                                "ata\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorNameColumn] = value;
@@ -1441,7 +1525,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ApplicantRepresentatorCompanyAddress {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyAddressColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyAddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApplicantRepresentatorCompanyAddress\' in table \'getSimplifi" +
+                                "edProccesData\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyAddressColumn] = value;
@@ -1452,7 +1542,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ApplicantRepresentatorCompanyTel {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyTelColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyTelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApplicantRepresentatorCompanyTel\' in table \'getSimplifiedPr" +
+                                "occesData\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyTelColumn] = value;
@@ -1463,7 +1559,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ApplicantRepresentatorEmailAddress {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorEmailAddressColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorEmailAddressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApplicantRepresentatorEmailAddress\' in table \'getSimplified" +
+                                "ProccesData\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorEmailAddressColumn] = value;
@@ -1472,12 +1574,35 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string RespondentName {
+            public string RespodentName {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.RespondentNameColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.RespodentNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RespodentName\' in table \'getSimplifiedProccesData\' is DBNul" +
+                                "l.", e);
+                    }
                 }
                 set {
-                    this[this.tablegetSimplifiedProccesData.RespondentNameColumn] = value;
+                    this[this.tablegetSimplifiedProccesData.RespodentNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string RespodentPN {
+                get {
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.RespodentPNColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RespodentPN\' in table \'getSimplifiedProccesData\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablegetSimplifiedProccesData.RespodentPNColumn] = value;
                 }
             }
             
@@ -1485,7 +1610,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string RespondentAddresses {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.RespondentAddressesColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.RespondentAddressesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RespondentAddresses\' in table \'getSimplifiedProccesData\' is" +
+                                " DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.RespondentAddressesColumn] = value;
@@ -1494,31 +1625,43 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string RespondentTels {
+            public string RespodentTels {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.RespondentTelsColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.RespodentTelsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RespodentTels\' in table \'getSimplifiedProccesData\' is DBNul" +
+                                "l.", e);
+                    }
                 }
                 set {
-                    this[this.tablegetSimplifiedProccesData.RespondentTelsColumn] = value;
+                    this[this.tablegetSimplifiedProccesData.RespodentTelsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string RespondentOtherInfo {
+            public string RespodentOtherInfo {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.RespondentOtherInfoColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.RespodentOtherInfoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RespodentOtherInfo\' in table \'getSimplifiedProccesData\' is " +
+                                "DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tablegetSimplifiedProccesData.RespondentOtherInfoColumn] = value;
+                    this[this.tablegetSimplifiedProccesData.RespodentOtherInfoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool RequestSolidarity {
+            public int RequestSolidarity {
                 get {
-                    return ((bool)(this[this.tablegetSimplifiedProccesData.RequestSolidarityColumn]));
+                    return ((int)(this[this.tablegetSimplifiedProccesData.RequestSolidarityColumn]));
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.RequestSolidarityColumn] = value;
@@ -1527,9 +1670,9 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool ObligationSolidarity {
+            public int ObligationSolidarity {
                 get {
-                    return ((bool)(this[this.tablegetSimplifiedProccesData.ObligationSolidarityColumn]));
+                    return ((int)(this[this.tablegetSimplifiedProccesData.ObligationSolidarityColumn]));
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ObligationSolidarityColumn] = value;
@@ -1540,7 +1683,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string SuitRequest {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.SuitRequestColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.SuitRequestColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SuitRequest\' in table \'getSimplifiedProccesData\' is DBNull." +
+                                "", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.SuitRequestColumn] = value;
@@ -1551,7 +1700,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string RequestSuitBase {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.RequestSuitBaseColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.RequestSuitBaseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RequestSuitBase\' in table \'getSimplifiedProccesData\' is DBN" +
+                                "ull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.RequestSuitBaseColumn] = value;
@@ -1562,7 +1717,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string RequestSuitInterest {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.RequestSuitInterestColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.RequestSuitInterestColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RequestSuitInterest\' in table \'getSimplifiedProccesData\' is" +
+                                " DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.RequestSuitInterestColumn] = value;
@@ -1573,7 +1734,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string RequestSuitPenalty {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.RequestSuitPenaltyColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.RequestSuitPenaltyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RequestSuitPenalty\' in table \'getSimplifiedProccesData\' is " +
+                                "DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.RequestSuitPenaltyColumn] = value;
@@ -1584,7 +1751,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string RequestOtherFees {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.RequestOtherFeesColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.RequestOtherFeesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RequestOtherFees\' in table \'getSimplifiedProccesData\' is DB" +
+                                "Null.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.RequestOtherFeesColumn] = value;
@@ -1595,7 +1768,13 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string DocumentationList {
                 get {
-                    return ((string)(this[this.tablegetSimplifiedProccesData.DocumentationListColumn]));
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.DocumentationListColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DocumentationList\' in table \'getSimplifiedProccesData\' is D" +
+                                "BNull.", e);
+                    }
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.DocumentationListColumn] = value;
@@ -1604,9 +1783,9 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool DependOnResponce {
+            public int DependOnResponce {
                 get {
-                    return ((bool)(this[this.tablegetSimplifiedProccesData.DependOnResponceColumn]));
+                    return ((int)(this[this.tablegetSimplifiedProccesData.DependOnResponceColumn]));
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.DependOnResponceColumn] = value;
@@ -1615,9 +1794,9 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool ImmediateExecution {
+            public int ImmediateExecution {
                 get {
-                    return ((bool)(this[this.tablegetSimplifiedProccesData.ImmediateExecutionColumn]));
+                    return ((int)(this[this.tablegetSimplifiedProccesData.ImmediateExecutionColumn]));
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.ImmediateExecutionColumn] = value;
@@ -1626,9 +1805,9 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool SeizeCollateral {
+            public int SeizeCollateral {
                 get {
-                    return ((bool)(this[this.tablegetSimplifiedProccesData.SeizeCollateralColumn]));
+                    return ((int)(this[this.tablegetSimplifiedProccesData.SeizeCollateralColumn]));
                 }
                 set {
                     this[this.tablegetSimplifiedProccesData.SeizeCollateralColumn] = value;
@@ -1648,6 +1827,83 @@ namespace Suit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int LoanID {
+                get {
+                    try {
+                        return ((int)(this[this.tablegetSimplifiedProccesData.LoanIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LoanID\' in table \'getSimplifiedProccesData\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablegetSimplifiedProccesData.LoanIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime InsertDate {
+                get {
+                    return ((global::System.DateTime)(this[this.tablegetSimplifiedProccesData.InsertDateColumn]));
+                }
+                set {
+                    this[this.tablegetSimplifiedProccesData.InsertDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Isready {
+                get {
+                    return ((int)(this[this.tablegetSimplifiedProccesData.IsreadyColumn]));
+                }
+                set {
+                    this[this.tablegetSimplifiedProccesData.IsreadyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Comment {
+                get {
+                    try {
+                        return ((string)(this[this.tablegetSimplifiedProccesData.CommentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Comment\' in table \'getSimplifiedProccesData\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablegetSimplifiedProccesData.CommentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SuitTypeID {
+                get {
+                    return ((int)(this[this.tablegetSimplifiedProccesData.SuitTypeIDColumn]));
+                }
+                set {
+                    this[this.tablegetSimplifiedProccesData.SuitTypeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApplicantCompanyNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantCompanyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApplicantCompanyNull() {
+                this[this.tablegetSimplifiedProccesData.ApplicantCompanyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsApplicantCompanyVATNull() {
                 return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantCompanyVATColumn);
             }
@@ -1656,6 +1912,90 @@ namespace Suit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetApplicantCompanyVATNull() {
                 this[this.tablegetSimplifiedProccesData.ApplicantCompanyVATColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApplicantCompanyAddressNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantCompanyAddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApplicantCompanyAddressNull() {
+                this[this.tablegetSimplifiedProccesData.ApplicantCompanyAddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApplicantCompanyTelNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantCompanyTelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApplicantCompanyTelNull() {
+                this[this.tablegetSimplifiedProccesData.ApplicantCompanyTelColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApplicantCompanyEmailAddressNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantCompanyEmailAddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApplicantCompanyEmailAddressNull() {
+                this[this.tablegetSimplifiedProccesData.ApplicantCompanyEmailAddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApplicantCompanyAccountNumberNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantCompanyAccountNumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApplicantCompanyAccountNumberNull() {
+                this[this.tablegetSimplifiedProccesData.ApplicantCompanyAccountNumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApplicantCompanyAccountBankCodeNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantCompanyAccountBankCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApplicantCompanyAccountBankCodeNull() {
+                this[this.tablegetSimplifiedProccesData.ApplicantCompanyAccountBankCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApplicantRepresentatorCompanyNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApplicantRepresentatorCompanyNull() {
+                this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApplicantRepresentatorNameNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantRepresentatorNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApplicantRepresentatorNameNull() {
+                this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1669,20 +2009,212 @@ namespace Suit {
             public void SetApplicantRepresentatorPNNull() {
                 this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorPNColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApplicantRepresentatorCompanyAddressNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyAddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApplicantRepresentatorCompanyAddressNull() {
+                this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyAddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApplicantRepresentatorCompanyTelNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyTelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApplicantRepresentatorCompanyTelNull() {
+                this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorCompanyTelColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApplicantRepresentatorEmailAddressNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.ApplicantRepresentatorEmailAddressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApplicantRepresentatorEmailAddressNull() {
+                this[this.tablegetSimplifiedProccesData.ApplicantRepresentatorEmailAddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRespodentNameNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.RespodentNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRespodentNameNull() {
+                this[this.tablegetSimplifiedProccesData.RespodentNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRespodentPNNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.RespodentPNColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRespodentPNNull() {
+                this[this.tablegetSimplifiedProccesData.RespodentPNColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRespondentAddressesNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.RespondentAddressesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRespondentAddressesNull() {
+                this[this.tablegetSimplifiedProccesData.RespondentAddressesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRespodentTelsNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.RespodentTelsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRespodentTelsNull() {
+                this[this.tablegetSimplifiedProccesData.RespodentTelsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRespodentOtherInfoNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.RespodentOtherInfoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRespodentOtherInfoNull() {
+                this[this.tablegetSimplifiedProccesData.RespodentOtherInfoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSuitRequestNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.SuitRequestColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSuitRequestNull() {
+                this[this.tablegetSimplifiedProccesData.SuitRequestColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRequestSuitBaseNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.RequestSuitBaseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRequestSuitBaseNull() {
+                this[this.tablegetSimplifiedProccesData.RequestSuitBaseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRequestSuitInterestNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.RequestSuitInterestColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRequestSuitInterestNull() {
+                this[this.tablegetSimplifiedProccesData.RequestSuitInterestColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRequestSuitPenaltyNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.RequestSuitPenaltyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRequestSuitPenaltyNull() {
+                this[this.tablegetSimplifiedProccesData.RequestSuitPenaltyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRequestOtherFeesNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.RequestOtherFeesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRequestOtherFeesNull() {
+                this[this.tablegetSimplifiedProccesData.RequestOtherFeesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDocumentationListNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.DocumentationListColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDocumentationListNull() {
+                this[this.tablegetSimplifiedProccesData.DocumentationListColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLoanIDNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.LoanIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLoanIDNull() {
+                this[this.tablegetSimplifiedProccesData.LoanIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCommentNull() {
+                return this.IsNull(this.tablegetSimplifiedProccesData.CommentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCommentNull() {
+                this[this.tablegetSimplifiedProccesData.CommentColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class getSimplifiedProccesDocumentationRow : global::System.Data.DataRow {
+        public partial class getSimplifiedProccesDoucmentationRow : global::System.Data.DataRow {
             
-            private getSimplifiedProccesDocumentationDataTable tablegetSimplifiedProccesDocumentation;
+            private getSimplifiedProccesDoucmentationDataTable tablegetSimplifiedProccesDoucmentation;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal getSimplifiedProccesDocumentationRow(global::System.Data.DataRowBuilder rb) : 
+            internal getSimplifiedProccesDoucmentationRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablegetSimplifiedProccesDocumentation = ((getSimplifiedProccesDocumentationDataTable)(this.Table));
+                this.tablegetSimplifiedProccesDoucmentation = ((getSimplifiedProccesDoucmentationDataTable)(this.Table));
             }
         }
         
@@ -1724,22 +2256,22 @@ namespace Suit {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class getSimplifiedProccesDocumentationRowChangeEvent : global::System.EventArgs {
+        public class getSimplifiedProccesDoucmentationRowChangeEvent : global::System.EventArgs {
             
-            private getSimplifiedProccesDocumentationRow eventRow;
+            private getSimplifiedProccesDoucmentationRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public getSimplifiedProccesDocumentationRowChangeEvent(getSimplifiedProccesDocumentationRow row, global::System.Data.DataRowAction action) {
+            public getSimplifiedProccesDoucmentationRowChangeEvent(getSimplifiedProccesDoucmentationRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public getSimplifiedProccesDocumentationRow Row {
+            public getSimplifiedProccesDoucmentationRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1893,10 +2425,11 @@ namespace Suit.DataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("ApplicantRepresentatorCompanyAddress", "ApplicantRepresentatorCompanyAddress");
             tableMapping.ColumnMappings.Add("ApplicantRepresentatorCompanyTel", "ApplicantRepresentatorCompanyTel");
             tableMapping.ColumnMappings.Add("ApplicantRepresentatorEmailAddress", "ApplicantRepresentatorEmailAddress");
-            tableMapping.ColumnMappings.Add("RespondentName", "RespondentName");
+            tableMapping.ColumnMappings.Add("RespodentName", "RespodentName");
+            tableMapping.ColumnMappings.Add("RespodentPN", "RespodentPN");
             tableMapping.ColumnMappings.Add("RespondentAddresses", "RespondentAddresses");
-            tableMapping.ColumnMappings.Add("RespondentTels", "RespondentTels");
-            tableMapping.ColumnMappings.Add("RespondentOtherInfo", "RespondentOtherInfo");
+            tableMapping.ColumnMappings.Add("RespodentTels", "RespodentTels");
+            tableMapping.ColumnMappings.Add("RespodentOtherInfo", "RespodentOtherInfo");
             tableMapping.ColumnMappings.Add("RequestSolidarity", "RequestSolidarity");
             tableMapping.ColumnMappings.Add("ObligationSolidarity", "ObligationSolidarity");
             tableMapping.ColumnMappings.Add("SuitRequest", "SuitRequest");
@@ -1909,6 +2442,11 @@ namespace Suit.DataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("ImmediateExecution", "ImmediateExecution");
             tableMapping.ColumnMappings.Add("SeizeCollateral", "SeizeCollateral");
             tableMapping.ColumnMappings.Add("CollateralList", "CollateralList");
+            tableMapping.ColumnMappings.Add("LoanID", "LoanID");
+            tableMapping.ColumnMappings.Add("InsertDate", "InsertDate");
+            tableMapping.ColumnMappings.Add("Isready", "Isready");
+            tableMapping.ColumnMappings.Add("Comment", "Comment");
+            tableMapping.ColumnMappings.Add("SuitTypeID", "SuitTypeID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1928,17 +2466,17 @@ namespace Suit.DataSet1TableAdapters {
             this._commandCollection[0].CommandText = "dbo.getSimplifiedProccesData";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Suitid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.getSimplifiedProccesDataDataTable dataTable, global::System.Nullable<int> Id) {
+        public virtual int Fill(DataSet1.getSimplifiedProccesDataDataTable dataTable, global::System.Nullable<int> Suitid) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Id.Value));
+            if ((Suitid.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Suitid.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1954,10 +2492,10 @@ namespace Suit.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.getSimplifiedProccesDataDataTable GetData(global::System.Nullable<int> Id) {
+        public virtual DataSet1.getSimplifiedProccesDataDataTable GetData(global::System.Nullable<int> Suitid) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Id.Value));
+            if ((Suitid.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Suitid.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1977,7 +2515,7 @@ namespace Suit.DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class getSimplifiedProccesDocumentationTableAdapter : global::System.ComponentModel.Component {
+    public partial class getSimplifiedProccesDoucmentationTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1991,7 +2529,7 @@ namespace Suit.DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public getSimplifiedProccesDocumentationTableAdapter() {
+        public getSimplifiedProccesDoucmentationTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2101,7 +2639,7 @@ namespace Suit.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.getSimplifiedProccesDocumentation";
+            this._commandCollection[0].CommandText = "dbo.getSimplifiedProccesDoucmentation";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -2110,7 +2648,7 @@ namespace Suit.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.getSimplifiedProccesDocumentationDataTable dataTable) {
+        public virtual int Fill(DataSet1.getSimplifiedProccesDoucmentationDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2123,9 +2661,9 @@ namespace Suit.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.getSimplifiedProccesDocumentationDataTable GetData() {
+        public virtual DataSet1.getSimplifiedProccesDoucmentationDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.getSimplifiedProccesDocumentationDataTable dataTable = new DataSet1.getSimplifiedProccesDocumentationDataTable();
+            DataSet1.getSimplifiedProccesDoucmentationDataTable dataTable = new DataSet1.getSimplifiedProccesDoucmentationDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

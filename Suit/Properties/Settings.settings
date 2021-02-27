@@ -5,10 +5,10 @@
     <Setting Name="PDFConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=188.93.95.217,1431;Initial Catalog=PDF;Persist Security Info=True;User ID=sa;Password=0key!@#&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=5.189.159.242;Initial Catalog=Analytics;Persist Security Info=True;User ID=pabuser;Password=h5OOQmQGLVo3f6VeGw8H&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=188.93.95.217,1431;Initial Catalog=PDF;Persist Security Info=True;User ID=sa;Password=0key!@#</Value>
+      <Value Profile="(Default)">Data Source=5.189.159.242;Initial Catalog=Analytics;Persist Security Info=True;User ID=pabuser;Password=h5OOQmQGLVo3f6VeGw8H</Value>
     </Setting>
   </Settings>
 </SettingsFile>
