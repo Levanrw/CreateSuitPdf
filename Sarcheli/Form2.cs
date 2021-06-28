@@ -139,7 +139,7 @@ namespace Sarcheli
                     ReportViewer _reportViewer1 = new ReportViewer();
                     _reportViewer1.ProcessingMode = ProcessingMode.Local;
 
-                    _reportViewer1.LocalReport.ReportPath = @"C:\Users\PAB\Desktop\Levan\pdfgenerator (2)\pdfgenerator (2)\pdfgenerator\New folder\CreatePdf\Sarcheli\Sarcheli2.rdlc";
+                    _reportViewer1.LocalReport.ReportPath = @"C:\Users\L.Shanava\source\repos\CreateSuitPdf\Sarcheli\Sarcheli2.rdlc";
 
                     // _reportViewer1.LocalReport.ReportPath = @"C:\Users\admin\Desktop\pdfgenerator (2)\pdfgenerator (2)\pdfgenerator\New folder\CreatePdf\Sarcheli\Sarcheli2.rdlc";
 
@@ -195,8 +195,8 @@ namespace Sarcheli
                         throw new Exception(ex.InnerException.ToString());
                     }
 
-                    using (FileStream fs = new FileStream(@"C:\Users\PAB\Desktop\Levan\sarcheli\PDF\" + Suits[i].ToString() + "_" + DateTime.Now.ToString("dd.MM.yyyy") + ".PDF", FileMode.Create))
-                    //using (FileStream fs = new FileStream(@"C:\Users\admin\Desktop\hotels\" + Suits[i].ToString() + "_" + DateTime.Now.ToString("dd.MM.yyyy") + ".PDF", FileMode.Create))
+                   // using (FileStream fs = new FileStream(@"C:\Users\PAB\Desktop\Levan\sarcheli\PDF\" + Suits[i].ToString() + "_" + DateTime.Now.ToString("dd.MM.yyyy") + ".PDF", FileMode.Create))
+                    using (FileStream fs = new FileStream(@"C:\Users\L.Shanava\Desktop\hotel\" + Suits[i].ToString() + "_" + DateTime.Now.ToString("dd.MM.yyyy") + ".PDF", FileMode.Create))
                     {
                         fs.Write(bytesa, 0, bytesa.Length);
                         fs.Close();

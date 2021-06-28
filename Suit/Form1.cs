@@ -1,4 +1,5 @@
 ﻿using iTextSharp.text.pdf;
+using Microsoft.Reporting.WebForms;
 using Microsoft.Reporting.WinForms;
 using PdfSharp.Pdf.IO;
 using Syncfusion.Pdf.Parsing;

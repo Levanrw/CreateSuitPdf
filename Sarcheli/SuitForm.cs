@@ -45,7 +45,7 @@ namespace Sarcheli
                     {
 
 
-                        _reportViewer1.LocalReport.ReportPath = @"C:\Users\admin\Desktop\LevanProjects\CreatePdf\Sarcheli\Sarcheli.rdlc";
+                        _reportViewer1.LocalReport.ReportPath = @"C:\Users\L.Shanava\source\repos\CreateSuitPdf\Sarcheli\Sarcheli2.rdlc";
                                                                  // C:\Users\admin\Desktop\LevanProjects\CreatePdf\Sarcheli
 
                         _reportViewer1.LocalReport.Refresh();

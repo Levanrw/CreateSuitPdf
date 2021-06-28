@@ -1,4 +1,5 @@
-﻿using Microsoft.Reporting.WinForms;
+﻿using Microsoft.Reporting.WebForms;
+//using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -150,7 +151,7 @@ namespace Sarcheli
                 reportViewer1.LocalReport.DataSources.Add(GetSuitAttachments1);
                 // reportViewer1.LocalReport.ReportPath = string.Format(@"C:\Users\admin\Downloads\pdfgenerator (2)\pdfgenerator\New folder\CreatePdf\Sarcheli\Sarcheli.rdlc");
 
-                rv1.Refresh();
+              //  rv1.Refresh();
                 string deviceInfo =
                                "<DeviceInfo>" +
                                "  <OutputFormat>EMF</OutputFormat>" +

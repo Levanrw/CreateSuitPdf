@@ -16,7 +16,7 @@ namespace Sarcheli
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new SuitForm());
+			Application.Run(new Form2());
 		}
 	}
 }
